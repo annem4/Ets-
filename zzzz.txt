@@ -1,0 +1,248 @@
+SqlConnection con=new SqlConnection("server=db205.my-hosting-panel.com; database=;user id=goggery_user;password=user@2015";
+db205.my-hosting-panel.com
+
+
+
+
+  SqlConnection con = new SqlConnection("server=db205.my-hosting-panel.com;  database=goggery_paractice;user id=goggery_user;password=user@2015");
+                SqlCommand cmd = new SqlCommand("select *from order2", con);
+                con.Open();
+                SqlDataReader rdr = cmd.ExecuteReader();
+                GridView1.DataSource = rdr;
+                GridView1.DataBind(); 
+                con.Close() 
+
+
+
+========================================================================================================================================================================
+
+venka
+(12:17:12 PM) SrinivasP:1:03:01 PM
+
+Harshit
+(12:48:25 PM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace namespaceClassLibrary1
+{
+    public class Class1
+    {
+        public bool CheckUser(string UserName, string Password)
+        {
+            if (UserName == "harshith" && Password == "123456"
+            {
+                return true;
+            }
+            return false;
+
+        }
+    }
+}
+(12:48:37 PM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
+
+namespace namespaceClassLibrary1
+{
+    public class CheckWithDB
+    {
+        SqlConnection con = new SqlConnection("server=LENOVO-PC;user id=sa;password=123;database=Practice";
+        public bool CheckUser(string UserName,string Password)
+        {
+            SqlCommand cmd = new SqlCommand("select * from Login where UserName=@Name and Password=@Pwd", con);
+            cmd.CommandType=CommandType.Text;
+            cmd.Parameters.AddWithValue("@Name",UserName);
+            cmd.Parameters.AddWithValue("@Pwd",Password);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.Read())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            con.Close();
+        }
+    }
+}
+(12:48:49 PM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Data;
+
+namespace namespaceClassLibrary1
+{
+
+    public class Class2
+    {
+        SqlConnection con = null;
+        SqlCommand cmd = null;
+        SqlDataAdapter da = null;
+        DataSet ds = null;
+        public void InsertLoginDetails(String UserName, String Password)
+        {
+            try
+            {
+                con = new SqlConnection("server=LENOVO-PC;user id=sa;password=123;database=Practice";
+                cmd = new SqlCommand("sp_InsertSampleLogin", con);
+                cmd.Parameters.AddWithValue("@iUserName", UserName);
+                cmd.Parameters.AddWithValue("@iPassword", Password);
+                cmd.CommandType = CommandType.StoredProcedure;
+                int i = cmd.ExecuteNonQuery();
+                //da = new SqlDataAdapter(cmd);
+                //ds = new DataSet();
+                //da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                Console.WriteLine("Record Inserted";
+            }
+        }
+    }
+    }
+(12:49:25 PM) using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using namespaceClassLibrary1;
+
+namespace _2TierWindows
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCheck_Click(object sender, EventArgs e)
+        {
+            CheckWithDB  obj = new CheckWithDB();
+            bool b = obj.CheckUser(txtUserName.Text, txtPassword.Text);
+            if (b == true)
+            {
+                lblMessage.Visible = true;
+                lblMessage.Text = "Valid User";
+            }
+            else
+            {
+                lblMessage.Visible = true;
+                lblMessage.Text = "InValid User";
+            }
+            //CheckWithDB obj = new CheckWithDB();
+            //bool b=obj.CheckUser(txtUserName.Text, txtPassword.Text);
+            //if (b == true)
+            //{
+            //    lblMessage.Visible = true;
+            //    lblMessage.Text = "Valid User";
+            //}
+            //else
+            //{
+            //    lblMessage.Visible = true;
+            //    lblMessage.Text = "InValid User";
+            //}
+        }
+
+        
+        private void btnInsert_Click_1(object sender, EventArgs e)
+        {
+            Class2 obj = new Class2();
+            obj.InsertLoginDetails(txtUserName.Text, txtPassword.Text);
+        }
+    }
+}
+(12:39:58 PM) okkasri  aa coding pampu
+
+india
+(12:41:11 PM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Data;
+using System.Data.Sql;
+
+namespace Test_2tier
+{
+    public class Class1
+    {
+        public bool method(int cid 
+        {
+            SqlConnection con = new SqlConnection("server=db205.my-hosting-panel.com;  database=goggery_paractice;user id=goggery_user;password=user@2015";
+            con.Open();
+            SqlCommand comd = new SqlCommand("select * from orders where id=@cid", con);
+            comd.Parameters.AddWithValue("@cid", cid);
+            SqlDataReader rdr = comd.ExecuteReader();
+            if(rdr.Read())
+            {
+                return true;
+
+            }
+            else
+            {
+                return false;
+            }
+            con.Close();
+        }
+    }
+}
+(12:43:13 PM) using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Test_2tier;
+
+namespace Sample12
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Class1 obj = new Class1();
+           bool result= obj.method (Convert.ToInt32(textBox1.Text));
+           if (result == true)
+           {
+               label2.Text = "success";
+           }
+           else
+           {
+               label2.Text = "unsucess";
+           }
+        }
+    }
+}
+
+
+mcity2016
+
+

@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<repositories>
+  <repository path="..\..\ets_web\WebApplication1\packages.config" />
+  <repository path="..\ets_web\packages.config" />
+</repositories>

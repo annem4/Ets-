@@ -1,0 +1,111 @@
+﻿Id: 264998019-26072017093321
+UserID: RN4545
+Form Name: Login
+project Name: ETS
+Method: ValidateUser
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Could not find stored procedure 'usp_fetchLoginUser'.
+------------------------------------------------------------------------------------
+
+Id: 718222831-26072017093530
+UserID: RN4545
+Form Name: Login
+project Name: ETS
+Method: ValidateUser
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Could not find stored procedure 'usp_fetchLoginUser'.
+------------------------------------------------------------------------------------
+
+Id: 489288940-26092018120626
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 2138273342-26092018121919
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 1224284400-26092018122030
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 306368485-26092018122255
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 961324979-26092018122310
+UserID: RN4545
+Form Name: Login
+project Name: ETS
+Method: ValidateUser
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=12528; handshake=2469; 
+Stacktrace:    at DataAccess.DA_User.CheckUserLogin(User objUser) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_User.cs:line 42
+   at ets_web._Default.ValidateUser() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Default.aspx.cs:line 96
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 1399566136-26092018122631
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=4127; handshake=8712; [Login] initialization=0; authentication=0; [Post-Login] complete=2000; 
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 1998902994-26092018122631
+UserID: ramun@goggery.com
+Form Name: Login
+project Name: ETS
+Method: ValidateUser
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=4127; handshake=8712; [Login] initialization=0; authentication=0; [Post-Login] complete=2000; 
+Stacktrace:    at DataAccess.DA_User.CheckUserLogin(User objUser) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_User.cs:line 42
+   at ets_web._Default.ValidateUser() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Default.aspx.cs:line 96
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+

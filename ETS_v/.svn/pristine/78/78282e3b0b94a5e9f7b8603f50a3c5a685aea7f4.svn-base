@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<TASKS>
+  <TASK>
+    <PROJECTNAME>NEW</PROJECTNAME>
+  </TASK>
+  <TASK>
+    <PROJECTNAME>Efforts Tracking System</PROJECTNAME>
+    <SmokeTestStatus>True</SmokeTestStatus>
+  </TASK>
+  <TASK>
+    <PROJECTNAME>Corporate SIGMA</PROJECTNAME>
+    <SmokeTestStatus>False</SmokeTestStatus>
+  </TASK>
+  <TASK>
+    <PROJECTNAME>Smart Finance Solutions</PROJECTNAME>
+    <SmokeTestStatus>False</SmokeTestStatus>
+  </TASK>
+</TASKS>

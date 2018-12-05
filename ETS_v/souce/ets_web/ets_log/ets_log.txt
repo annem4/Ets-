@@ -1,0 +1,104 @@
+Id: 394215740-24102018142530
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Could not find stored procedure 'usp_fetchNotifications'.
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 454859378-24102018142543
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Could not find stored procedure 'usp_fetchNotifications'.
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 1777411028-24102018142653
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Could not find stored procedure 'usp_fetchNotifications'.
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 1012915780-24102018142658
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Could not find stored procedure 'usp_fetchNotifications'.
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 1924995105-24102018142716
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Could not find stored procedure 'usp_fetchNotifications'.
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 952746294-24102018142740
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Could not find stored procedure 'usp_fetchNotifications'.
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 1910930118-29102018112421
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Could not find stored procedure 'usp_fetchNotifications'.
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+
+Id: 691834275-07112018134449
+UserID: user
+Form Name: Site.Master.cs
+project Name: ETS
+Method: NotificatinoLable
+Type: System.Data.SqlClient.SqlException
+Source: .Net SqlClient Data Provider
+Message: Could not find stored procedure 'usp_fetchNotifications'.
+Stacktrace:    at DataAccess.DA_Notification.getNotificationData(Int32 iUserCode) in c:\Users\india\Desktop\ETS_v_1.0\souce\DataAccess\DA_Notification.cs:line 35
+   at ets_web.SiteMaster.NotificationsLabel() in c:\Users\india\Desktop\ETS_v_1.0\souce\ets_web\Site.Master.cs:line 40
+Source: .Net SqlClient Data Provider
+------------------------------------------------------------------------------------
+

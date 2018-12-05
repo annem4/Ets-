@@ -1,0 +1,319 @@
+
+
+
+<html>
+<head>
+<title>Variables!!!</title>
+<script type="text/javascript">
+var one = 22;
+var two = 3;
+var add = one + two;
+var minus = one - two;
+var multiply = one * two;
+var divide = one/two;
+	document.write("First No: = " + one + "<br />Second No: = " + two + " <br />");
+	document.write(one + " + " + two + " = " + add + "<br/>");
+	document.write(one + " - " + two + " = " + minus + "<br/>");
+	document.write(one + " * " + two + " = " + multiply + "<br/>");
+	document.write(one + " / " + two + " = " + divide + "<br/>"); 
+</script>
+
+<script language="javascript">
+function f1()
+{
+alert('Good Morning')
+}
+function f2()
+{ 
+confirm('this is not going to happened')
+}
+
+function f3()
+{
+alert('Your name is'+' '+txtname.value)
+}
+
+function f4()
+{
+txtmsg.value='';
+if(txtemail.value='')
+{
+alert('plz enter your email id');
+}
+else
+{ 
+alert(txtmsg.value=txtemail.value;
+txtemail.value='';
+}
+}
+</script>
+
+	<script language='javascript'>
+
+fuction lang()
+{
+txtmsg.value='';
+if(radiotelugu.checked)
+{
+txtmsg.value=radiotelugu.value;
+}
+else if(radiotamil.checked)
+txtmsg.value=radiotamil.value;
+
+else if(radiohindi.checked)
+txtmsg.value=radiohindi.value;
+else
+alert ('plz select your mother language')
+}
+</script>
+
+<script language='javascript'>
+function check()
+{
+
+mycheck.checked=true;
+}
+function uncheck()
+{
+mycheck.checked=false;
+}
+
+
+
+// Validations//
+
+function valid()
+{
+var alpha = /^[A-Za-z]+$/
+if(txtname.value.match(alpha))
+{
+alert('valid input');
+}
+else
+{ 
+alert('invalid input');
+}
+myform.reset();
+}
+
+</script>
+</head>
+
+
+
+<body>
+<script type="text/javascript">
+const person = {
+name:'john',
+age:30
+}
+person.name='sara';
+person.age=20
+document.write(person.name)
+
+console.log(person)
+console.log(typeof(person.name))
+console.log(typeof(person.age))
+
+
+let car = null;    //null is an object//
+console.log(typeof(car))
+const isItBook = true;
+ 
+let smart;
+console.log(typeof(smart))
+
+console.log(typeof(isItBook))
+
+let sym = Symbol();
+console.log(typeof(sym))
+
+// REFERENCE TYPES //
+let date = new Date();
+console.log(date);
+console.log(typeof (date));
+
+const numbers = [1,2,3,4]
+//numbers.push(6);
+console.log(numbers);
+console.log(typeof(numbers))
+numbers.pop(2);
+console.log(numbers);
+
+// Converstions //
+var name = Number('r');
+var name1  = parseInt('r');
+var pa = parseFloat('103.458');
+var nam = Number(5)
+var n1 = Math.PI;
+document.write(name); // NaN: Not a Number //
+
+
+
+document.write(nam);
+document.write(name1);
+document.write(pa);
+document.write(pa.toFixed(2))
+</script>
+<script>
+const name='Sappy';
+const age = 25;
+const dob=20/02/1993;
+var village = 'Jainad' 
+var dist = 'Adilabad'
+var pincode=504309;
+let phno=9652612991;
+let html;
+
+const age1=18;
+const name4='Harshi';
+if(age>0 && age<12)
+console.log('${name4} is a child');
+else if(age>=13&& age<=18)
+console.log('${name4} is a teenager');
+
+alert ('welcome to JS')
+confirm('R u sure you want to go ?')
+prompt ('Write something about yourself')
+
+</script>
+
+<input type='button', value='Morning' id='btnmrng' onclick='f1()'/> <br></br>
+<input type='button'  value='Hi', id='btnhi' onclick='f2()'/>  <br></br>
+Enter Your Name:
+<input type='text' id='txtname'/>  <br></br>
+<input type='button'  value='Submit' onclick='f3()'/> <br>
+Enter Your Mail id is here:
+<input type= 'text' id='txtemail'/> <br>
+<input type='button' id='btnemail' value='Email' onclick='f4()'/>
+Your Email id is: <input type='text' id='txtmsg'/>   <br>
+
+
+<h3> Select Your Mother Languague </h3>
+<input type='radio' id='radiotelugu' value='telugu' name='language'/> Telugu   <br> </br>
+<input type='radio' id='radiotamil' value='tamil' name='language'/> Tamil   <br> </br>
+<input type='radio' id='radiohindi' value='hindi' name='language'/> Hindi   <br> </br>
+<input type='button' id='btnsubmit' value='Submit' onclick='lang()'/>   <br> </br>
+
+Your Mother Language is :<input type='text' id='txtmsg'/>  <br> </br>
+
+<input type='checkbox' id='mycheck'/>
+
+<input type='button' id='btnchecck' value='Check' onclick='check()'/> 
+
+<input type='button' id='btnunchecck' value='Uncheck' onclick='uncheck()'/> 
+
+
+//Validations//
+
+<form id='myform'>
+Enter Your name:
+<input type='text' id='txtname'/><br></br>
+<input type='button' id='btnvalid' value='Valid'onclick='valid()'/>
+</form>
+
+</body>
+</html>
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+Harshit sends you a file:
+GridView_OnRowDataBound_Sample.sln (1.03 KB)
+Completed
+
+Harshit sends you a file:
+GV_OnPageIndexChanging.sln (1.01 KB)
+Completed
+
+Harshit
+(2:22:00 PM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Drawing;
+
+namespace GridView_OnRowDataBound_Sample
+{
+    public partial class Form_GVOnRowDataBound : System.Web.UI.Page
+    {
+        string S=ConfigurationManager.ConnectionStrings["CONSTR"].ConnectionString;
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                ShowData();
+            }  
+        }
+        //method for Displaying Data in Gridview  
+        protected void ShowData()
+        {
+            DataTable dt_tblEmployee = new DataTable();
+            SqlConnection con = new SqlConnection;
+            SqlDataAdapter adapt = new SqlDataAdapter("select * from tbl_Employee", con);
+            con.Open();
+            adapt.Fill(dt_tblEmployee);
+            con.Close();
+            GridView1.DataSource = dt_tblEmployee;
+            GridView1.DataBind();
+        }
+        //RowDataBound Event  
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            //Checking the RowType of the Row  
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                //If Salary is less than 10000 than set the row Background Color to Cyan  
+                if (Convert.ToInt32(e.Row.Cells[2].Text) > 10000)
+                {
+                    e.Row.BackColor = Color.PaleGreen;
+                }
+            }
+        }
+    }
+}
+(2:22:23 PM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Data;
+using System.Configuration;
+
+namespace GV_OnPageIndexChanging
+{
+    public partial class Form_GVPageIndexChanging : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if(!IsPostBack)
+            {
+                ShowData();   
+            }
+           
+        }
+        protected void ShowData()
+        {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["constr"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("select * from EMPLOYEE", con);
+            con.Open();
+            SqlDataReader dr_EMPLOYEE=cmd.ExecuteReader();
+            GV_Page.DataSource = dr_EMPLOYEE;
+            GV_Page.DataBind();
+            con.Close();
+        }
+        protected void GV_Page_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GV_Page.PageIndex = e.NewPageIndex;
+            GV_Page.DataBind();
+        }
+    }
+}

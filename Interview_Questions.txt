@@ -1,0 +1,41 @@
+//////////////////////////////////////////////////////////////////////
+///////////////Interview Questions////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+
+1) Tell me about yourself and your project 
+2) What is frogien key
+3) what is cluster index
+4) what is the methodology of your project
+5) what is the heriaciay of team
+6) How many members in your team
+7) How many types of aecess specifiers are there ?
+8) what is the difference between public and internal public?
+9) what is wcf full form and use of wcf
+10) what data enitities?
+11) what is datareader and data adataper?
+12) what is ASP.net and What is ASP.mvc 
+13) Which is better when compare to ASP.net and ASP.mvc 
+14) write a example of method overloading 
+15) what is the diff b/w 3tier architercher and mvc 
+16) Exaplain about mvc 
+17) what is the diiference between javascript and jquery
+18) how you wiil do validation in javascript
+19) what is a object?
+20) what is the diff b/w interfaces and abstract class
+21) whaich type of methods we will declare in interfaces and abstract class
+22) what is primary key
+23) which operations we will do by using stored procedures
+24) what is constrcters
+24) copy constructors example
+25) insert queary in diff types
+26) is it possible to keep try in try block and is it usefully
+27)
+20) How to define a root config file url
+21) What is wcf and mvc ?
+22) Define a over riding method 
+23) Define validations in ASP
+24) Differnce d/w appconfig and webconfig
+24) Diff b/w WCF and Webservice 
+25) How to declare a sessions 
+26) 

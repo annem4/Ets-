@@ -1,0 +1,716 @@
+
+NANI
+(11:46:23 AM) hiii sree
+
+india
+(11:46:31 AM) hi
+
+NANI
+(11:46:40 AM) wht dng
+
+india
+(11:46:51 AM) 3 tier
+(11:46:54 AM) u?
+
+NANI
+(11:47:02 AM) jst nw cmpltd
+
+india
+(11:47:11 AM) k
+
+NANI
+(11:47:13 AM) javascript chudamannaru
+(11:47:26 AM) nxt
+
+india
+(11:47:27 AM) ya cheparu madam
+
+NANI
+(11:47:51 AM) cls tisukonu ani annaru
+
+india
+(11:48:12 AM) ya
+
+NANI
+(11:48:22 AM) ok
+(11:50:21 AM) amount tachava sree
+
+india
+(11:50:55 AM) ya
+
+NANI
+(11:51:19 AM) oka 100 ivvu vallaki iddarivi ani chappi
+
+india
+(11:51:41 AM) ok
+
+NANI
+(11:51:46 AM) nenu neku tarvata istanu
+
+india
+(11:51:55 AM) ok
+(11:54:26 AM) hi main
+(11:54:39 AM) send me the 3 tier code once
+
+NANI
+(11:54:46 AM) ok
+(11:55:25 AM) <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="3tierexample.aspx.cs" Inherits="_3tierexample._3tierexample" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table>
+        <tr>
+            <td>
+                <asp:Label ID="lblcustomername" runat="server" Text="customername"></asp:Label><asp:TextBox ID="txtcustomername" runat="server"></asp:TextBox>
+            </td>
+        </tr>
+       <tr>
+           <td>
+                <asp:Label ID="lblcustomeraddress" runat="server" Text="customeraddress"></asp:Label><asp:TextBox ID="txtcustomeraddress" runat="server"></asp:TextBox>
+           </td>
+       </tr>
+       <tr>
+           <td>
+                <asp:Label ID="lblcustomercompany" runat="server" Text="customercompany"></asp:Label><asp:TextBox ID="txtcustomercompany" runat="server"></asp:TextBox>
+           </td>
+       </tr>
+            <tr>
+                <td>
+                     <asp:Label ID="lblcustomercity" runat="server" Text="customercity"></asp:Label><asp:TextBox ID="txtcustomercity" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblcustomerpincode" runat="server" Text="customerpincode"></asp:Label><asp:TextBox ID="txtcustomerpincode" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+         
+            </table>
+        <asp:Button ID="btn_update" runat="server" Text="update"  OnClick="btn_update_Click" />
+         <asp:Button ID="btn_insert" runat="server" Text="insert"  OnClick="btn_insert_Click" />
+
+        <asp:Button ID="btn_delete" runat="server" Text="delete"  OnClick="btn_delete_Click" />
+         <asp:Button ID="btn_submit" runat="server" Text="submit" /><br />
+        <asp:Label ID="lbl_status" runat="server"></asp:Label>
+
+        <asp:GridView ID="grdview" runat="server"></asp:GridView>
+    </div>
+    </form>
+</body>
+</html>
+(11:53:18 AM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace databaselayer
+{
+    public class clsdatalayer
+    {
+        public int customername{ get; set; }
+        public string customeraddress { get; set; }
+        public string customercompany { get; set; }
+        public string customercity { get; set; }
+        public int customerpincode { get; set; }
+
+    }
+}
+(11:53:34 AM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Configuration;
+using databaselayer;
+namespace business
+{
+    public class business1
+    {
+        clsdatalayer obj = null;
+        SqlConnection conn = null;
+        SqlCommand cmd = null;
+        SqlDataAdapter dr = null;
+        DataSet ds = null;
+        string s = "server=db205.my-hosting-panel.com;database=goggery_paractice;user id=goggery_user;Password=user@2015";
+        public DataSet insertcustomername(clsdatalayer dl)
+        {
+            conn = new SqlConnection;
+            SqlConnection con = new SqlConnection("server=db205.my-hosting-panel.com;database=goggery_paractice;user id=goggery_user;Password=user@2015";
+            con.Open();
+            cmd = new SqlCommand("sp_insert_customer13",con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@customername", dl.customername);
+            cmd.Parameters.AddWithValue("@customeraddress", dl.customeraddress);
+            cmd.Parameters.AddWithValue("@customercompany", dl.customercompany);
+            cmd.Parameters.AddWithValue("@customercity", dl.customercity);
+            cmd.Parameters.AddWithValue("@customerpincode", dl.customerpincode);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            return ds;
+
+        }
+        public DataSet updatecustomername(clsdatalayer dl)
+        {
+            conn = new SqlConnection;
+            conn.Open();
+            cmd = new SqlCommand("sp_update_customer13";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@customername", dl.customername);
+            cmd.Parameters.AddWithValue("@customeraddress", dl.customeraddress);
+            cmd.Parameters.AddWithValue("@customercompany", dl.customercompany);
+            cmd.Parameters.AddWithValue("@customercity", dl.customercity);
+	            cmd.Parameters.AddWithValue("@customerpincode", dl.customerpincode);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            return ds;
+
+        }
+        public DataSet deletecustomername(clsdatalayer dl)
+        {
+            conn = new SqlConnection;
+            conn.Open();
+            cmd = new SqlCommand("sp_delete_customer13";
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@customername", dl.customername);
+            //cmd.Parameters.AddWithValue("@customeraddress", dl.customeraddress);
+            //cmd.Parameters.AddWithValue("@customercompany", dl.customercompany);
+            //cmd.Parameters.AddWithValue("@customercity", dl.customercity);
+            //cmd.Parameters.AddWithValue("@customerpincode", dl.customerpincode);
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            return ds;
+
+        }
+    }
+}
+(11:53:58 AM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using business;
+using databaselayer;
+
+namespace _3tierexample
+{
+    public partial class _3tierexample : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        protected void btn_delete_Click(object sender, EventArgs e)
+        {
+            clsdatalayer obj = new clsdatalayer ();
+            business1 obj1 = new business1();
+            obj.customername = Convert.ToInt32(txtcustomername.Text);
+            //obj.customeraddress = txtcustomeraddress.Text;
+            //obj.customercity = txtcustomercity.Text;
+            //obj.customercompany = txtcustomercompany.Text;
+            //obj.customerpincode = txtcustomerpincode.Text;
+            //try
+            //{
+                obj1.deletecustomername(obj);
+             //   lbl_status.Text = "deleted succesfully....";
+           // }
+            //catch
+            //{
+            //    lbl_status.Text = "deleted failed...";
+            //}
+            
+
+        }
+
+        protected void btn_update_Click(object sender, EventArgs e)
+        {
+            clsdatalayer obj = new clsdatalayer();
+            business1 obj1 = new business1();
+            obj.customername = Convert.ToInt32(txtcustomername.Text);
+            obj.customeraddress = txtcustomeraddress.Text;
+            obj.customercity = txtcustomercity.Text;
+            obj.customercompany = txtcustomercompany.Text;
+            obj.customerpincode =Convert.ToInt32(txtcustomerpincode.Text);
+            //try
+            //{
+            obj1.updatecustomername(obj);
+            //lbl_status.Text = "Updated sucessfully.......";
+            //}
+            //catch
+            //{
+              //  lbl_status.Text = "Updated failed.......";
+            //}
+
+        }
+
+        protected void btn_insert_Click(object sender, EventArgs e)
+        {
+            clsdatalayer obj = new clsdatalayer();
+            business1 obj1 = new business1();
+            obj.customername = Convert.ToInt32(txtcustomername.Text);
+            obj.customeraddress = txtcustomeraddress.Text;
+            obj.customercity = txtcustomercity.Text;
+            obj.customercompany = txtcustomercompany.Text;
+            obj.customerpincode =Convert.ToInt32(txtcustomerpincode.Text);
+           // try
+            //{
+                obj1.insertcustomername(obj);
+              //  lbl_status.Text = "insert succesfully....";
+            //}
+            //catch
+            //{
+              //  lbl_status.Text = "inserted failed...";
+            //}
+            
+        }
+
+        //protected void btn_submit_Click(object sender, EventArgs e)
+        //{
+        //    clsdatalayer obj = new clsdatalayer();
+        //    business1 obj1 = new business1();
+        //    obj.customername = Convert.ToInt32(txtcustomername.Text);
+        //    obj.customeraddress = txtcustomeraddress.Text;
+        //    obj.customercity = txtcustomercity.Text;
+        //    obj.customercompany = txtcustomercompany.Text;
+        //    obj.customerpincode = txtcustomerpincode.Text;
+            
+        //}
+    }
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+BE_Class1 n = null;
+        public bool Method(BE_Class1 fileds)
+        {
+            string cstr = "server=db205.my-hosting-panel.com;  database=goggery_paractice;user id=goggery_user;password=user@2015";
+            SqlConnection con = new SqlConnection(cstr);
+            SqlCommand comd = new SqlCommand("sp_chk_login", con);
+            comd.Parameters.AddWithValue("@username", fileds.username);
+            comd.Parameters.AddWithValue("@passwords", fileds.password);
+            con.Open();
+            //cmd.CommandType = CommandType.Text;
+            comd.CommandType = CommandType.StoredProcedure;
+            //cmd.ExecuteNonQuery();
+            SqlDataReader rdr = comd.ExecuteReader();
+            if (rdr.Read())
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            con.Close();
+
+
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////Mobile Recharge///////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+india
+(12:19:27 PM) hi main
+(12:19:44 PM) send the code another time
+(12:20:02 PM) unfornutely it got deletd
+(12:20:08 PM) pls
+
+NANI
+(12:20:44 PM) ok
+(12:20:46 PM) sree
+(12:20:51 PM) no prblm
+(12:21:09 PM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using mb;
+using mb1;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Net;
+
+namespace mobile_recharge
+{
+    public partial class mb_recharge : System.Web.UI.Page
+    {
+        mba obj1 = new mba();
+        mba1 obj2 = new mba1();
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnrecharge_Click(object sender, EventArgs e)
+        {
+             //if (IsPostBack)
+            {
+                string systemname = Dns.GetHostName();
+                string ipaddress = Dns.GetHostByName(systemname).AddressList[0].ToString();
+                obj1.sno = Convert.ToInt32(txtsno.Text);
+                obj1.State = ddlstate.SelectedItem.Text;
+                obj1.NetworkName = ddlNetworkName.SelectedItem.Text;
+                obj1.ContactNo = txtContactNo.Text.ToString();
+                obj1.Amount =Convert.ToDouble(txtAmount.Text);
+                obj1.SystemIPAddress = ipaddress;
+                obj1.systemName = systemname;
+                obj1.dated = DateTime.Now;
+                obj1.RechargeType = ddlRechargeType.SelectedItem.Text;
+                obj2.ADDRC(obj1);
+
+
+            }
+            txtsno.Text = "";
+            txtAmount.Text = "";
+            txtContactNo.Text = "";
+            ddlNetworkName.SelectedIndex = 0;
+            ddlRechargeType.SelectedIndex = 0;
+            ddlstate.SelectedIndex = 0;
+        }
+        protected void btnfetch_Click(object sender, EventArgs e)
+        {
+            GridView1.DataSource = obj2.ShowRC(obj1);
+            GridView1.DataBind();
+        }
+
+    }
+}
+(12:21:22 PM) create table mobilerecharge4(sno int,State varchar(100),NetworkName varchar(100),RechargeType varchar(100),
+ContactNo varchar(100),Amount money,SystemIPAddress varchar(100),systemName varchar(100),dated datetime)
+create procedure sp_mobilerecharge4(@sno int ,@State varchar(100),@NetworkName varchar(100),
+@RechargeType varchar(100),@ContactNo varchar(100),@Amount money,@SystemIPAddress varchar(100),
+@systemName varchar(100),@dated datetime,@cmd VARCHAR(100))
+as
+begin
+
+insert into mobilerecharge4(sno,State,NetworkName,RechargeType,
+ContactNo,Amount,SystemIPAddress,systemName,dated 
+values
+(@sno,@State,@NetworkName,@RechargeType,
+@ContactNo,@Amount,@SystemIPAddress,@systemName,@dated)
+end
+(12:21:39 PM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using System.Configuration;
+using mb;
+
+namespace mb1
+{
+    public class mba1
+    {
+        SqlConnection _Connection = null;
+        SqlCommand _Command = null;
+        SqlDataAdapter _Adapter = null;
+        DataTable dtResult = null;
+        public SqlConnection getconnection
+        {
+            get { return new SqlConnection("server=db205.my-hosting-panel.com; user id=goggery_user;Password=user@2015;database=goggery_paractice"; }
+        }
+        public DataTable ADDRC(mba obj)
+        {
+            _Connection = getconnection;
+            _Command = new SqlCommand("sp_mobilerecharge4", _Connection);
+            _Command.CommandType = CommandType.StoredProcedure;
+            _Command.Parameters.AddWithValue("@sno", obj.sno);
+            _Command.Parameters.AddWithValue("@State", obj.State);
+            _Command.Parameters.AddWithValue("@NetworkName", obj.NetworkName);
+            _Command.Parameters.AddWithValue("@RechargeType", obj.RechargeType);
+            _Command.Parameters.AddWithValue("@ContactNo", obj.ContactNo);
+            _Command.Parameters.AddWithValue("@Amount", obj.Amount);
+            _Command.Parameters.AddWithValue("@SystemIPAddress", obj.SystemIPAddress);
+            _Command.Parameters.AddWithValue("@systemName", obj.systemName);
+            _Command.Parameters.AddWithValue("@dated", obj.dated);
+            _Adapter = new SqlDataAdapter(_Command);
+            dtResult = new DataTable();
+            _Adapter.Fill(dtResult);
+            return (dtResult);
+        }
+        public DataTable ShowRC(mba obj)
+        {
+            _Connection = getconnection;
+            _Command = new SqlCommand("select * from mobilerecharge4 ", _Connection);
+            //_Command.CommandType = CommandType.StoredProcedure;
+            _Adapter = new SqlDataAdapter(_Command);
+            dtResult = new DataTable();
+            _Adapter.Fill(dtResult);
+
+            return (dtResult);
+        }
+    }
+}
+(12:21:50 PM) using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace mb
+{
+    public class mba
+    {
+        public int sno { get; set; }
+        public string State{get;set;}
+        public string NetworkName{get;set;}
+        public string RechargeType{get;set;}
+        public string ContactNo{get;set;}
+        public double Amount{get;set;}
+        public string SystemIPAddress{get;set;}
+        public string systemName{get;set;}
+        public  DateTime dated { get; set; }
+    }
+}
+(12:22:05 PM) <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="mb_recharge.aspx.cs" Inherits="mobile_recharge.mb_recharge" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <table>
+            <tr>
+            <td>   
+            <asp:Label ID="lblsno" runat="server" Text="sno">
+            </asp:Label><asp:TextBox ID="txtsno" runat="server"></asp:TextBox>
+            </td>
+            </tr>
+          
+            <tr>
+                <td>
+                    <asp:Label ID="lblstate" runat="server" Text="state"></asp:Label>
+                <aspropDownList ID="ddlstate" runat="server">
+                    <asp:ListItem>selecteditem</asp:ListItem>
+                    <asp:Listitem>ap</asp:Listitem>
+                    <asp:Listitem>ts</asp:Listitem>
+                    <asp:Listitem>up</asp:Listitem>
+                    <asp:Listitem>mp</asp:Listitem>
+                </aspropDownList>
+                        </td>
+                <td>
+                    &nbsp;</td>
+                </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblNetworkName" runat="server" Text="NetworkName"></asp:Label>
+                    <aspropDownList ID="ddlNetworkName" runat="server" >
+                   <asp:ListItem>selecteditem</asp:ListItem>
+                         <asp:Listitem>idea</asp:Listitem>
+                    <asp:Listitem>jio</asp:Listitem>
+                    <asp:Listitem>telenor</asp:Listitem>
+                    <asp:Listitem>airtel</asp:Listitem>
+                </aspropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblRechargeType" runat="server" Text="RechargeType"></asp:Label>
+                    <aspropDownList ID="ddlRechargeType" runat="server">
+                           <asp:ListItem>selecteditem</asp:ListItem>
+                     <asp:Listitem>freetalktime</asp:Listitem>
+                    <asp:Listitem>special</asp:Listitem>
+                        </aspropDownList>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblContactNo" runat="server" Text="ContactNo"></asp:Label><asp:TextBox ID="txtContactNo" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblAmount" runat="server" Text="Amount"></asp:Label><asp:TextBox ID="txtAmount" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblSystemIPAddress" runat="server" Text="SystemIPAddress"></asp:Label>
+                    <asp:TextBox ID="txtSystemIPAddress" runat="server"></asp:TextBox>
+                 
+                 </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="lblsystemName" runat="server" Text="systemName"></asp:Label><asp:TextBox ID="txtsystemName" runat="server"></asp:TextBox>
+                 </td>
+            </tr>
+        </table>
+    
+    </div>
+        <p>
+            <asp:Button ID="btnrecharge" runat="server" Text="recharge" OnClick="btnrecharge_Click" />
+            <asp:Button ID="btnfetch" runat="server" Text="fetch" OnClick="btnfetch_Click" />
+        </p>
+        <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+    </form>
+</body>
+</html>
+(12:22:15 PM) its came naaa
+
+india
+(12:23:25 PM) ya tq
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="GridDemo.aspx.cs" Inherits="Test_WebApplication.Form.WebForm1" %>  
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">  
+</asp:Content>  
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">  
+  
+<div>  
+      
+    <%--GRIDVIEW CSS--%>  
+      <style>  
+        body { font-size:62.5% }  
+ 
+        #Employee {  
+            font:11px Times New Roman;   
+            width:auto;  
+            display:block;  
+            padding:10px 0 0 0;  
+        }  
+  
+        .text {  
+            width:auto;  
+            padding:2px 4px;  
+            font:inherit;  
+            font-weight:bold;  
+            text-align:left;  
+            border:solid 2px #BFBFBF;  
+            background:yellow;  
+            text-transform:uppercase;  
+        }  
+              
+        .Grid {  
+            width:100%;   
+            font:inherit;   
+            margin:5px 0 10px 0;   
+            background-color:#FFF;   
+            border:solid 2px #525252;  
+            text-transform:uppercase;  
+        }  
+        .Grid td {  
+            font:inherit;   
+            padding:2px;   
+            border:solid 1px #C1C1C1;   
+            color:#333;   
+            text-align:center;  
+        }  
+        .Grid th {  
+            padding:5px;   
+            color:blue;   
+            background:#424234 border-left:solid 3px #525233;   
+            font:inherit;  
+            font-weight:bold;  
+        }  
+              
+        .Gridbutton {  
+            cursor:pointer;   
+            text-align:center;   
+            color: white;   
+            font:inherit;  
+            background-color: blue;  
+            border:solid 1px #3079ED;   
+            -moz-border-radius:5px;   
+            -webkit-border-radius:5px;   
+            line-height:20px;  
+        }  
+    </style>  
+  
+</div>  
+  
+    <%--- Add Script Manager ----%>  
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering="true" EnablePageMethods="true" >  
+    </asp:ScriptManager>  
+  
+    <div id="Employee">  
+        <asp:UpdatePanel runat="server" UpdateMode="Always"  >  
+            <ContentTemplate>  
+                <asp:GridView runat="server" ID="GridEmpData"  
+                 CssClass="Grid"   
+                 AutoGenerateColumns="false"   
+                 ShowFooter="true" >  
+                 <Columns>  
+                    <asp:TemplateField HeaderText="Employee No.">  
+                        <ItemTemplate><%#Eval("EmpID")%></ItemTemplate>  
+                        <FooterTemplate><h4><i> INSERT NEW RECORD </i></h4></FooterTemplate>  
+                    </asp:TemplateField>  
+  
+                    <asp:TemplateField HeaderText="Employee Name">  
+                        <ItemTemplate><%#Eval("EmpName")%></ItemTemplate>  
+                        <FooterTemplate><asp:TextBox runat="server" ID="txtEmpName" CssClass="text"></asp:TextBox></FooterTemplate>  
+                    </asp:TemplateField>  
+                   
+                    <asp:TemplateField HeaderText="Gender">  
+                        <ItemTemplate><%#Eval("EmpGender")%></ItemTemplate>  
+                        <FooterTemplate><asp:TextBox runat="server" ID="txtEmpGender" CssClass="text"></asp:TextBox></FooterTemplate>  
+                    </asp:TemplateField>  
+  
+                    <asp:TemplateField HeaderText="Date of Birth">  
+                        <ItemTemplate><%#Eval("EmpDOB")%></ItemTemplate>  
+                        <FooterTemplate><asp:TextBox runat="server" ID="txtEmpDOB" CssClass="text"></asp:TextBox></FooterTemplate>  
+                    </asp:TemplateField>  
+  
+                    <asp:TemplateField HeaderText="Department">  
+                        <ItemTemplate><%#Eval("EmpDepartment")%></ItemTemplate>  
+                        <FooterTemplate><asp:TextBox runat="server" ID="txtEmpDpt" CssClass="text" ></asp:TextBox></FooterTemplate>  
+                    </asp:TemplateField>  
+  
+                    <asp:TemplateField>  
+                        <ItemTemplate></ItemTemplate>  
+                        <FooterTemplate><asp:Button runat="server" ID="btnSave" Text="SAVE NEW RECORD" CssClass="Gridbutton" CommandName="Footer" onclick="btnSave_Click" /></FooterTemplate>  
+                    </asp:TemplateField>  
+                 </Columns>  
+                   
+                 <EmptyDataTemplate>  
+                    <tr>  
+                        <th>Employee Name</th>  
+                        <th>Gender</th>  
+                        <th>Date of Birth</th>  
+                        <th>Department</th>  
+                        <th></th>  
+                    </tr  
+  
+                    <tr>  
+                        <td><asp:TextBox runat="server" ID="txtEmpName" CssClass="text"></asp:TextBox></td>  
+                        <td><asp:TextBox runat="server" ID="txtEmpGender" CssClass="text"></asp:TextBox></td>  
+                        <td><asp:TextBox runat="server" ID="txtEmpDOB" CssClass="text"></asp:TextBox></td>  
+                        <td><asp:TextBox runat="server" ID="txtEmpDpt" CssClass="text" ></asp:TextBox></td>  
+                        <td><asp:Button runat="server" ID="btnSave" Text="SAVE NEW RECORD" CssClass="Gridbutton" onclick="btnSave_Click" CommandName="EmptyDataTemplate" /></td>  
+                    </tr>  
+                                  
+                 </EmptyDataTemplate>  
+                  
+                </asp:GridView>  
+            </ContentTemplate>  
+          
+        </asp:UpdatePanel>  
+      
+    </div>  
+      
+    <asp:Label runat="server" ID="lblmsg"></asp:Label>  
+</asp:Content>
